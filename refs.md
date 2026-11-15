@@ -58,7 +58,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 ## Pessoa 6
 - Nome: Pedro Lukas 
 - Sobrenome: Alves de Sousa Santos
-- Papel na equipe: Desenvolvedor
+- Papel na equipe: Desenvolvedor, Pitch e Apresentação
 - LinkedIn: https://www.linkedin.com/in/pedro-lukas-alves-595162380/
 - GitHub: https://github.com/pedro-lukas-git
 - Email: pedrolukasalves.ti@gmail.com
