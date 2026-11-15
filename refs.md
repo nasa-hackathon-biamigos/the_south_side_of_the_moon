@@ -18,7 +18,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 ## Pessoa 2
 - Nome: Beatriz de Moura Guimarães
 - Sobrenome: de Moura Guimarães 
-- Papel na equipe: Desenvolvedor 
+- Papel na equipe: Desenvolvedor, Design
 - LinkedIn: https://www.linkedin.com/in/beatriz-mouradev/
 - GitHub: https://github.com/BiaTrixie
 - Email: codebiadeveloper@gmail.com
@@ -39,7 +39,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - Nome: Enzo 
 - Sobrenome: Freitas Serra
 - Papel na equipe: Pitch e Apresentação
-- LinkedIn:
+- LinkedIn: https://www.linkedin.com/in/enzo-serra-54b5861a5/
 - GitHub: https://github.com/enzofreitasserra
 - Email: enzofreitasserra@gmail.com
 - Telefone (opcional):
