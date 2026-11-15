@@ -19,7 +19,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 ## Pessoa 2
 - Nome: Beatriz de Moura Guimarães
 - Sobrenome: de Moura Guimarães 
-- Papel na equipe: Desenvolvedor, Design
+- Papel na equipe: Desenvolvedora
 - Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: https://www.linkedin.com/in/beatriz-mouradev/
 - GitHub: https://github.com/BiaTrixie
@@ -30,7 +30,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 ## Pessoa 3
 - Nome: Caio 
 - Sobrenome: Gonçalves Sardinha
-- Papel na equipe: Pitch e Apresentação
+- Papel na equipe: Designer
 - Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: www.linkedin.com/in/caio-goncalves-sardinha
 - GitHub: https://github.com/sargondzn
@@ -41,7 +41,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 ## Pessoa 4
 - Nome: Enzo 
 - Sobrenome: Freitas Serra
-- Papel na equipe: Pitch e Apresentação
+- Papel na equipe: Analista de Dados
 - Graduação: Tecnólogo em Ciência de Dados e IA — PUC Goiás
 - LinkedIn: https://www.linkedin.com/in/enzo-serra-54b5861a5/
 - GitHub: https://github.com/enzofreitasserra
@@ -63,7 +63,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 ## Pessoa 6
 - Nome: Pedro Lukas 
 - Sobrenome: Alves de Sousa Santos
-- Papel na equipe: Desenvolvedor, Pitch e Apresentação
+- Papel na equipe: Engenheiro de IA
 - Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: https://www.linkedin.com/in/pedro-lukas-alves-595162380/
 - GitHub: https://github.com/pedro-lukas-git
