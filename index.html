@@ -1,202 +1,266 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- Faz a página se ajustar à tela do celular -->
+  <!-- Makes the page fit phone screens -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The South Side Of The Moon | Equipe</title>
+  <title>The South Side Of The Moon | Team</title>
+  <link rel="icon" href="others/logo_moon.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== Cores e fontes gerais (troque à vontade) ===== */
+    /* ===== Palette taken from the logo: black sky, white beam, light spectrum ===== */
     :root {
-      --fundo: #0f172a;
-      --card: #1e293b;
-      --texto: #f1f5f9;
-      --texto-suave: #94a3b8;
-      --destaque: #38bdf8;
+      --bg: #000000;
+      --card: #0b0b0b;
+      --card-border: #1c1c1c;
+      --chip: #161616;
+      --text: #ffffff;
+      --text-muted: #a1a1a1;
+
+      --red: #ff2a2a;
+      --orange: #ff9b21;
+      --yellow: #fff22e;
+      --green: #1fc91f;
+      --cyan: #21d6cf;
+      --purple: #b62fb4;
+
+      --spectrum: linear-gradient(180deg,
+        var(--red) 0 16.66%, var(--orange) 16.66% 33.33%, var(--yellow) 33.33% 50%,
+        var(--green) 50% 66.66%, var(--cyan) 66.66% 83.33%, var(--purple) 83.33% 100%);
+      --spectrum-h: linear-gradient(90deg,
+        var(--red) 0 16.66%, var(--orange) 16.66% 33.33%, var(--yellow) 33.33% 50%,
+        var(--green) 50% 66.66%, var(--cyan) 66.66% 83.33%, var(--purple) 83.33% 100%);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      background: var(--fundo);
-      color: var(--texto);
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       padding: 24px 16px 48px;
       line-height: 1.5;
     }
 
-    main { max-width: 640px; margin: 0 auto; }
+    main { max-width: 680px; margin: 0 auto; }
 
-    /* ===== Cabeçalho com o projeto ===== */
-    header { text-align: center; margin-bottom: 32px; }
-    header h1 { font-size: 1.8rem; }
-    header p { color: var(--texto-suave); margin: 8px 0 16px; }
+    h1, h2 { font-family: "Space Grotesk", "Inter", sans-serif; }
 
-    .links-projeto { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    /* ===== Header: logo + team name ===== */
+    header { text-align: center; margin-bottom: 36px; }
 
-    .botao {
+    .logo {
+      display: block;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 4px;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .spectrum-bar {
+      width: 132px;
+      height: 6px;
+      margin: 14px auto 16px;
+      background: var(--spectrum-h);
+      border-radius: 3px;
+    }
+
+    header p { color: var(--text-muted); margin-bottom: 20px; }
+
+    .button {
       display: inline-block;
-      padding: 10px 16px;
+      padding: 11px 20px;
       border-radius: 999px;
-      background: var(--destaque);
-      color: var(--fundo);
+      background: var(--text);
+      color: var(--bg);
       font-weight: 600;
       text-decoration: none;
+      transition: box-shadow 0.2s;
     }
-    .botao.secundario {
-      background: transparent;
-      color: var(--destaque);
-      border: 1px solid var(--destaque);
-    }
+    .button:hover { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--cyan); }
 
-    /* ===== Cards dos integrantes ===== */
-    .equipe { display: grid; gap: 16px; }
+    /* ===== Team member cards ===== */
+    .team { display: grid; gap: 16px; }
+
+    /* Each card gets one color of the spectrum, in logo order */
+    .card:nth-child(6n+1) { --c: var(--red); }
+    .card:nth-child(6n+2) { --c: var(--orange); }
+    .card:nth-child(6n+3) { --c: var(--yellow); }
+    .card:nth-child(6n+4) { --c: var(--green); }
+    .card:nth-child(6n+5) { --c: var(--cyan); }
+    .card:nth-child(6n+6) { --c: var(--purple); }
 
     .card {
+      position: relative;
+      overflow: hidden;
       background: var(--card);
+      border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 20px;
+      padding: 24px 20px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
     }
-
-    .card img {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 12px;
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 4px;
+      background: var(--c);
     }
 
+    .card img,
     .card .avatar {
       width: 96px;
       height: 96px;
       border-radius: 50%;
       margin-bottom: 12px;
+      border: 3px solid var(--c);
+      padding: 3px;
+      background: var(--card);
+    }
+    .card img { object-fit: cover; }
+    .card .avatar {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #334155;
-      color: var(--destaque);
+      color: var(--c);
       font-size: 2rem;
       font-weight: 700;
     }
 
-    .card h2 { font-size: 1.2rem; }
-    .card .papel { color: var(--texto-suave); font-size: 0.95rem; margin-bottom: 14px; }
+    .card h2 { font-size: 1.15rem; font-weight: 700; line-height: 1.3; }
+    .card .role { color: var(--text-muted); font-size: 0.95rem; margin: 4px 0 14px; }
 
-    .contatos { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 14px; }
+    .contacts { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 
-    .contatos a {
+    .contacts a {
       padding: 8px 14px;
       border-radius: 10px;
-      background: #334155;
-      color: var(--texto);
+      background: var(--chip);
+      border: 1px solid var(--card-border);
+      color: var(--text);
       text-decoration: none;
       font-size: 0.9rem;
+      transition: border-color 0.2s;
     }
+    .contacts a:hover,
+    .contacts a:focus-visible { border-color: var(--c); outline: none; }
 
-    footer { text-align: center; color: var(--texto-suave); font-size: 0.85rem; margin-top: 32px; }
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+    footer .spectrum-bar { width: 48px; height: 4px; margin: 0 auto 12px; }
 
-    /* Em telas maiores, 2 cards por linha */
+    /* On wider screens, 2 cards per row */
     @media (min-width: 600px) {
-      .equipe { grid-template-columns: 1fr 1fr; }
+      .team { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
   <main>
 
-    <!-- ===== PROJETO ===== -->
+    <!-- ===== PROJECT ===== -->
     <header>
+      <img class="logo" src="others/logo_moon.jpeg" alt="The South Side Of The Moon logo">
       <h1>The South Side Of The Moon</h1>
+      <div class="spectrum-bar" aria-hidden="true"></div>
       <p>See the Sun and Earth from any lunar south pole landing site, and know when you'll have power and a link home.</p>
-      <div class="links-projeto">
-        <a class="botao" href="https://lunarcast-ten.vercel.app/" target="_blank" rel="noopener">Ver o projeto</a>
-      </div>
+      <a class="button" href="https://lunarcast-ten.vercel.app/" target="_blank" rel="noopener">See the project</a>
     </header>
 
-    <!-- ===== EQUIPE ===== -->
-    <section class="equipe">
+    <!-- ===== TEAM ===== -->
+    <section class="team">
 
-      <!-- Integrante 1 -->
+      <!-- Member 1 -->
       <article class="card">
-        <img src="fotos/anna.jpg" alt="Foto de Anna Luiza">
+        <img src="fotos/anna.jpg" alt="Photo of Anna Luiza">
         <h2>Anna Luiza Gonzaga Fernandes</h2>
-        <p class="papel">Pesquisa Científica</p>
-        <div class="contatos">
+        <p class="role">Scientific Research</p>
+        <div class="contacts">
           <a href="https://www.linkedin.com/in/anna-luiza-gonzaga/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/AnnaLuizaG" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <a class="botao" href="contatos/anna_luiza.vcf" download>Salvar contato</a>
       </article>
 
-      <!-- Integrante 2 -->
+      <!-- Member 2 -->
       <article class="card">
-        <img src="fotos/beatriz.jpg" alt="Foto de Beatriz">
+        <img src="fotos/beatriz.jpg" alt="Photo of Beatriz">
         <h2>Beatriz de Moura Guimarães</h2>
-        <p class="papel">Desenvolvedor</p>
-        <div class="contatos">
+        <p class="role">Developer</p>
+        <div class="contacts">
           <a href="https://www.linkedin.com/in/beatriz-mouradev/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/BiaTrixie" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <a class="botao" href="contatos/beatriz.vcf" download>Salvar contato</a>
       </article>
 
-      <!-- Integrante 3 -->
+      <!-- Member 3 -->
       <article class="card">
-        <img src="fotos/caio.jpg" alt="Foto de Caio">
+        <img src="fotos/caio.jpeg" alt="Photo of Caio">
         <h2>Caio Gonçalves Sardinha</h2>
-        <p class="papel">Pitch e Apresentação</p>
-        <div class="contatos">
+        <p class="role">Pitch &amp; Presentation</p>
+        <div class="contacts">
           <a href="https://www.linkedin.com/in/caio-goncalves-sardinha" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/sargondzn" target="_blank" rel="noopener">GitHub</a>
           <a href="mailto:caio_sardinha@discente.ufg.br">Email</a>
         </div>
-        <a class="botao" href="contatos/caio.vcf" download>Salvar contato</a>
       </article>
 
-      <!-- Integrante 4 -->
+      <!-- Member 4 -->
       <article class="card">
-        <img src="fotos/enzo.jpg" alt="Foto de Enzo">
+        <img src="fotos/enzo.jpg" alt="Photo of Enzo">
         <h2>Enzo Freitas Serra</h2>
-        <p class="papel">Pitch e Apresentação</p>
-        <div class="contatos">
+        <p class="role">Pitch &amp; Presentation</p>
+        <div class="contacts">
           <a href="https://github.com/enzofreitasserra" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:enzofreitasserra@gmail.com">Email</a>
         </div>
-        <a class="botao" href="contatos/enzo.vcf" download>Salvar contato</a>
       </article>
 
-      <!-- Integrante 5 -->
+      <!-- Member 5 -->
       <article class="card">
-        <img src="fotos/juliana.jpg" alt="Foto de Juliana">
+        <img src="fotos/juliana.jpg" alt="Photo of Juliana">
         <h2>Juliana de Prado Campos Ferreira</h2>
-        <p class="papel">Pesquisa Científica</p>
-        <div class="contatos">
+        <p class="role">Scientific Research</p>
+        <div class="contacts">
           <a href="https://www.linkedin.com/in/juliana-de-prado-campos-ferreira-835412301/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/jadefermi" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <a class="botao" href="contatos/juliana.vcf" download>Salvar contato</a>
       </article>
 
-      <!-- Integrante 6 -->
+      <!-- Member 6 -->
       <article class="card">
-        <img src="fotos/pedro_lukas.jpg" alt="Foto de Pedro Lukas">
+        <img src="fotos/pedro_lukas.jpg" alt="Photo of Pedro Lukas">
         <h2>Pedro Lukas Alves de Sousa Santos</h2>
-        <p class="papel">Desenvolvedor</p>
-        <div class="contatos">
+        <p class="role">Developer</p>
+        <div class="contacts">
           <a href="https://www.linkedin.com/in/pedro-lukas-alves-595162380/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/pedro-lukas-git" target="_blank" rel="noopener">GitHub</a>
         </div>
-        <a class="botao" href="contatos/pedro_lukas.vcf" download>Salvar contato</a>
       </article>
 
     </section>
 
-    <footer>Feito pela equipe The South Side Of The Moon</footer>
+    <footer>
+      <div class="spectrum-bar" aria-hidden="true"></div>
+      Made by The South Side Of The Moon
+    </footer>
   </main>
 </body>
 </html>

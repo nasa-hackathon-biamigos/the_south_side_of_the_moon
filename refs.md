@@ -33,7 +33,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - GitHub: https://github.com/sargondzn
 - Email: caio_sardinha@discente.ufg.br
 - Telefone (opcional):
-- Foto: caio.jpg
+- Foto: caio.jpeg
 
 ## Pessoa 4
 - Nome: Enzo 
