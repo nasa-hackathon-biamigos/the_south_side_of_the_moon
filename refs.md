@@ -9,6 +9,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - Nome: Anna Luiza 
 - Sobrenome: Gonzaga Fernandes
 - Papel na equipe: Pesquisa Científica
+- Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: https://www.linkedin.com/in/anna-luiza-gonzaga/
 - GitHub: https://github.com/AnnaLuizaG
 - Email: gonzagaanna@discente.ufg.br
@@ -19,6 +20,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - Nome: Beatriz de Moura Guimarães
 - Sobrenome: de Moura Guimarães 
 - Papel na equipe: Desenvolvedor, Design
+- Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: https://www.linkedin.com/in/beatriz-mouradev/
 - GitHub: https://github.com/BiaTrixie
 - Email: codebiadeveloper@gmail.com
@@ -29,6 +31,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - Nome: Caio 
 - Sobrenome: Gonçalves Sardinha
 - Papel na equipe: Pitch e Apresentação
+- Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: www.linkedin.com/in/caio-goncalves-sardinha
 - GitHub: https://github.com/sargondzn
 - Email: caio_sardinha@discente.ufg.br
@@ -39,6 +42,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - Nome: Enzo 
 - Sobrenome: Freitas Serra
 - Papel na equipe: Pitch e Apresentação
+- Graduação: Tecnólogo em Ciência de Dados e IA — PUC Goiás
 - LinkedIn: https://www.linkedin.com/in/enzo-serra-54b5861a5/
 - GitHub: https://github.com/enzofreitasserra
 - Email: enzofreitasserra@gmail.com
@@ -49,6 +53,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - Nome: Juliana 
 - Sobrenome: de Padro Campos Ferreira
 - Papel na equipe: Pesquisa Científica
+- Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: https://www.linkedin.com/in/juliana-de-prado-campos-ferreira-835412301/
 - GitHub: https://github.com/jadefermi
 - Email: julianaprado.cf@gmail.com
@@ -59,6 +64,7 @@ Fotos: coloque o arquivo na pasta `fotos/` e escreva só o nome do arquivo (ex.:
 - Nome: Pedro Lukas 
 - Sobrenome: Alves de Sousa Santos
 - Papel na equipe: Desenvolvedor, Pitch e Apresentação
+- Graduação: Bacharelado em Inteligência Artificial — UFG
 - LinkedIn: https://www.linkedin.com/in/pedro-lukas-alves-595162380/
 - GitHub: https://github.com/pedro-lukas-git
 - Email: pedrolukasalves.ti@gmail.com
