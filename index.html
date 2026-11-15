@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Faz a página se ajustar à tela do celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nome do Projeto | Equipe</title>
+
+  <style>
+    /* ===== Cores e fontes gerais (troque à vontade) ===== */
+    :root {
+      --fundo: #0f172a;
+      --card: #1e293b;
+      --texto: #f1f5f9;
+      --texto-suave: #94a3b8;
+      --destaque: #38bdf8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--fundo);
+      color: var(--texto);
+      padding: 24px 16px 48px;
+      line-height: 1.5;
+    }
+
+    main { max-width: 640px; margin: 0 auto; }
+
+    /* ===== Cabeçalho com o projeto ===== */
+    header { text-align: center; margin-bottom: 32px; }
+    header h1 { font-size: 1.8rem; }
+    header p { color: var(--texto-suave); margin: 8px 0 16px; }
+
+    .links-projeto { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+
+    .botao {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--destaque);
+      color: var(--fundo);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .botao.secundario {
+      background: transparent;
+      color: var(--destaque);
+      border: 1px solid var(--destaque);
+    }
+
+    /* ===== Cards dos integrantes ===== */
+    .equipe { display: grid; gap: 16px; }
+
+    .card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card img {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
+
+    .card h2 { font-size: 1.2rem; }
+    .card .papel { color: var(--texto-suave); font-size: 0.95rem; margin-bottom: 14px; }
+
+    .contatos { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 14px; }
+
+    .contatos a {
+      padding: 8px 14px;
+      border-radius: 10px;
+      background: #334155;
+      color: var(--texto);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    footer { text-align: center; color: var(--texto-suave); font-size: 0.85rem; margin-top: 32px; }
+
+    /* Em telas maiores, 2 cards por linha */
+    @media (min-width: 600px) {
+      .equipe { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+
+    <!-- ===== PROJETO ===== -->
+    <header>
+      <h1>Nome do Projeto</h1>
+      <p>Uma frase explicando o que o projeto faz.</p>
+      <div class="links-projeto">
+        <a class="botao" href="https://github.com/usuario/repositorio" target="_blank">Ver o projeto</a>
+        <a class="botao secundario" href="mailto:equipe@exemplo.com">Falar com a equipe</a>
+      </div>
+    </header>
+
+    <!-- ===== EQUIPE ===== -->
+    <section class="equipe">
+
+      <!-- Integrante 1: copie este bloco <article> para cada pessoa -->
+      <article class="card">
+        <img src="fotos/caio.jpg" alt="Foto de Caio">
+        <h2>Caio</h2>
+        <p class="papel">Machine Learning</p>
+        <div class="contatos">
+          <a href="https://www.linkedin.com/in/seu-usuario" target="_blank">LinkedIn</a>
+          <a href="https://github.com/seu-usuario" target="_blank">GitHub</a>
+          <a href="mailto:seu-email@exemplo.com">Email</a>
+        </div>
+        <a class="botao" href="contatos/caio.vcf" download>Salvar contato</a>
+      </article>
+
+      <!-- Integrante 2 -->
+      <article class="card">
+        <img src="fotos/pessoa2.jpg" alt="Foto de Pessoa 2">
+        <h2>Pessoa 2</h2>
+        <p class="papel">Front-end</p>
+        <div class="contatos">
+          <a href="https://www.linkedin.com/in/usuario2" target="_blank">LinkedIn</a>
+          <a href="https://github.com/usuario2" target="_blank">GitHub</a>
+          <a href="mailto:email2@exemplo.com">Email</a>
+        </div>
+        <a class="botao" href="contatos/pessoa2.vcf" download>Salvar contato</a>
+      </article>
+
+    </section>
+
+    <footer>Feito pela equipe Nome do Projeto</footer>
+  </main>
+</body>
+</html>

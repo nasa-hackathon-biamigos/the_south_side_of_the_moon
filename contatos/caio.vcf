@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Sobrenome;Caio;;;
+FN:Caio Sobrenome
+ORG:Nome do Projeto
+TITLE:Machine Learning
+EMAIL;TYPE=INTERNET:seu-email@exemplo.com
+URL:https://www.linkedin.com/in/seu-usuario
+URL:https://github.com/seu-usuario
+END:VCARD
